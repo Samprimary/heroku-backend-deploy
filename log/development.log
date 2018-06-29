@@ -730,3 +730,280 @@ Filter chain halted as :authenticate rendered or redirected
 Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
 
 
+Started PATCH "/change-password" for ::1 at 2018-06-29 14:59:58 -0400
+Processing by UsersController#changepw as */*
+  Parameters: {"passwords"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "f"], ["LIMIT", 1]]
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sign-up" for ::1 at 2018-06-29 15:00:29 -0400
+Processing by UsersController#signup as */*
+  Parameters: {"credentials"=>{"email"=>"b@dee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "b@dee"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "b@dee"], ["token", "009dee55783546681127c82eccd7a2d7"], ["password_digest", "$2a$10$peXUotpt.9ZtNoTOvLvPJuL4QMUps4lmr57J4wCRSkHzNWxk0oj9O"], ["created_at", "2018-06-29 19:00:29.540154"], ["updated_at", "2018-06-29 19:00:29.540154"]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "b@dee"], ["id", 6], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Json (0.25ms)
+Completed 201 Created in 71ms (Views: 0.8ms | ActiveRecord: 8.6ms)
+
+
+Started PATCH "/change-password" for ::1 at 2018-06-29 15:01:18 -0400
+Processing by UsersController#changepw as */*
+  Parameters: {"passwords"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "f"], ["LIMIT", 1]]
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/change-password" for ::1 at 2018-06-29 15:01:28 -0400
+Processing by UsersController#changepw as */*
+  Parameters: {"passwords"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "f"], ["LIMIT", 1]]
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/change-password" for ::1 at 2018-06-29 15:01:59 -0400
+Processing by UsersController#changepw as */*
+  Parameters: {"passwords"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "f"], ["LIMIT", 1]]
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/change-password" for ::1 at 2018-06-29 15:02:15 -0400
+Processing by UsersController#changepw as */*
+  Parameters: {"passwords"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "f"], ["LIMIT", 1]]
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sign-in" for ::1 at 2018-06-29 15:27:11 -0400
+Processing by UsersController#signin as */*
+  Parameters: {"credentials"=>{"email"=>"b@dee", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "b@dee"], ["LIMIT", 1]]
+  [1m[35mSQL (27.1ms)[0m  [1m[33mUPDATE "users" SET "token" = 'd9080d966d9a75b18cf50249ebba292a', "updated_at" = '2018-06-29 19:27:11.658875' WHERE "users"."id" = $1[0m  [["id", 6]]
+[active_model_serializers] Rendered UserLoginSerializer with ActiveModelSerializers::Adapter::Json (1.98ms)
+Completed 200 OK in 99ms (Views: 2.5ms | ActiveRecord: 27.3ms)
+
+
+Started PATCH "/change-password" for ::1 at 2018-06-29 15:28:24 -0400
+Processing by UsersController#changepw as */*
+  Parameters: {"passwords"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "d9080d966d9a75b18cf50249ebba292a"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "b@dee"], ["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "password_digest" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2018-06-29 19:28:25.072052"], ["password_digest", "$2a$10$J2uL..5Uzivw3PXXMwQ27.CzE/8T2iQmj2w13RFL1/qtsIXrmPGWK"], ["id", 6]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 126ms (ActiveRecord: 7.3ms)
+
+
+Started DELETE "/sign-out" for ::1 at 2018-06-29 15:33:57 -0400
+Processing by UsersController#signout as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "d9080d966d9a75b18cf50249ebba292a"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "token" = '3b2286cbc8a2c2f980d7fa1d43d5518f', "updated_at" = '2018-06-29 19:33:57.384794' WHERE "users"."id" = $1[0m  [["id", 6]]
+Completed 204 No Content in 3ms (ActiveRecord: 1.0ms)
+
+
+Started DELETE "/sign-out" for ::1 at 2018-06-29 15:34:12 -0400
+Processing by UsersController#signout as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."token" = $1 LIMIT $2[0m  [["token", "d9080d966d9a75b18cf50249ebba292a"], ["LIMIT", 1]]
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2018-06-29 15:49:42 -0400
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/raiders" for ::1 at 2018-06-29 15:49:47 -0400
+Processing by RaidersController#index as HTML
+  [1m[36mRaider Load (0.3ms)[0m  [1m[34mSELECT "raiders".* FROM "raiders"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (0.33ms)
+Completed 200 OK in 5ms (Views: 1.9ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/sign-in" for ::1 at 2018-06-29 15:56:50 -0400
+Processing by UsersController#signin as */*
+  Parameters: {"credentials"=>{"email"=>"b@dee", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "b@dee"], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "users" SET "token" = '1f26aa665d7c68014b345e2fa8a81b63', "updated_at" = '2018-06-29 19:56:50.267902' WHERE "users"."id" = $1[0m  [["id", 6]]
+[active_model_serializers] Rendered UserLoginSerializer with ActiveModelSerializers::Adapter::Json (0.26ms)
+Completed 200 OK in 83ms (Views: 0.7ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/raiders" for ::1 at 2018-06-29 15:58:26 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Megatrogg", "power"=>"10"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (13.1ms)[0m  [1m[32mINSERT INTO "raiders" ("name", "power", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Megatrogg"], ["power", 10], ["created_at", "2018-06-29 19:58:26.603535"], ["updated_at", "2018-06-29 19:58:26.603535"]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RaiderSerializer with ActiveModelSerializers::Adapter::Json (5.12ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 21.0ms)
+
+
+  
+NoMethodError (undefined method `user' for #<Raider:0x00007f98735273e0>):
+  
+app/controllers/raiders_controller.rb:21:in `create'
+Started POST "/raiders" for ::1 at 2018-06-29 15:59:02 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Megatrogg", "power"=>"10"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "raiders" ("name", "power", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Megatrogg"], ["power", 10], ["created_at", "2018-06-29 19:59:02.874801"], ["updated_at", "2018-06-29 19:59:02.874801"]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RaiderSerializer with ActiveModelSerializers::Adapter::Json (3.88ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 6.1ms)
+
+
+  
+NoMethodError (undefined method `user' for #<Raider:0x00007f9871c29f00>):
+  
+app/controllers/raiders_controller.rb:21:in `create'
+Started POST "/raiders" for ::1 at 2018-06-29 16:01:44 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Megatrogg", "power"=>"10"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "raiders" ("name", "power", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Megatrogg"], ["power", 10], ["created_at", "2018-06-29 20:01:44.081515"], ["updated_at", "2018-06-29 20:01:44.081515"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RaiderSerializer with ActiveModelSerializers::Adapter::Json (0.41ms)
+Completed 201 Created in 12ms (Views: 1.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/raiders" for ::1 at 2018-06-29 16:01:51 -0400
+Processing by RaidersController#index as HTML
+  [1m[36mRaider Load (0.3ms)[0m  [1m[34mSELECT "raiders".* FROM "raiders"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (0.49ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/raiders/2" for ::1 at 2018-06-29 16:02:30 -0400
+Processing by RaidersController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mRaider Load (0.2ms)[0m  [1m[34mSELECT  "raiders".* FROM "raiders" WHERE "raiders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "raiders" WHERE "raiders"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 3ms (ActiveRecord: 1.0ms)
+
+
+Started DELETE "/raiders/3" for ::1 at 2018-06-29 16:02:43 -0400
+Processing by RaidersController#destroy as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mRaider Load (0.3ms)[0m  [1m[34mSELECT  "raiders".* FROM "raiders" WHERE "raiders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "raiders" WHERE "raiders"."id" = $1[0m  [["id", 3]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 9ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/raiders" for ::1 at 2018-06-29 16:02:48 -0400
+Processing by RaidersController#index as HTML
+  [1m[36mRaider Load (0.3ms)[0m  [1m[34mSELECT "raiders".* FROM "raiders"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (0.33ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/raiders" for ::1 at 2018-06-29 16:03:17 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Dumblegore", "power"=>"6"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "raiders" ("name", "power", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Dumblegore"], ["power", 6], ["created_at", "2018-06-29 20:03:17.814346"], ["updated_at", "2018-06-29 20:03:17.814346"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RaiderSerializer with ActiveModelSerializers::Adapter::Json (0.31ms)
+Completed 201 Created in 9ms (Views: 1.0ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/raiders" for ::1 at 2018-06-29 16:03:36 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Vienna Toe", "power"=>"4"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "raiders" ("name", "power", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Vienna Toe"], ["power", 4], ["created_at", "2018-06-29 20:03:36.920777"], ["updated_at", "2018-06-29 20:03:36.920777"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RaiderSerializer with ActiveModelSerializers::Adapter::Json (0.31ms)
+Completed 201 Created in 10ms (Views: 1.0ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/raiders" for ::1 at 2018-06-29 16:03:50 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Slagomizer Joe", "power"=>"7"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "raiders" ("name", "power", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Slagomizer Joe"], ["power", 7], ["created_at", "2018-06-29 20:03:50.995354"], ["updated_at", "2018-06-29 20:03:50.995354"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RaiderSerializer with ActiveModelSerializers::Adapter::Json (0.38ms)
+Completed 201 Created in 10ms (Views: 1.0ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/raiders" for ::1 at 2018-06-29 16:04:05 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Goont", "power"=>"3"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "raiders" ("name", "power", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Goont"], ["power", 3], ["created_at", "2018-06-29 20:04:05.697389"], ["updated_at", "2018-06-29 20:04:05.697389"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RaiderSerializer with ActiveModelSerializers::Adapter::Json (0.26ms)
+Completed 201 Created in 9ms (Views: 0.8ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/raiders" for ::1 at 2018-06-29 16:04:48 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Spearvixen", "power"=>"10"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "raiders" ("name", "power", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Spearvixen"], ["power", 10], ["created_at", "2018-06-29 20:04:48.263915"], ["updated_at", "2018-06-29 20:04:48.263915"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RaiderSerializer with ActiveModelSerializers::Adapter::Json (0.31ms)
+Completed 201 Created in 10ms (Views: 1.0ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/raiders" for ::1 at 2018-06-29 16:05:01 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Wint", "power"=>"1"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "raiders" ("name", "power", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Wint"], ["power", 1], ["created_at", "2018-06-29 20:05:01.276567"], ["updated_at", "2018-06-29 20:05:01.276567"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RaiderSerializer with ActiveModelSerializers::Adapter::Json (0.38ms)
+Completed 201 Created in 9ms (Views: 1.0ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/raiders" for ::1 at 2018-06-29 16:05:17 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Ol' Joe", "power"=>"3"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "raiders" ("name", "power", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ol' Joe"], ["power", 3], ["created_at", "2018-06-29 20:05:17.830831"], ["updated_at", "2018-06-29 20:05:17.830831"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RaiderSerializer with ActiveModelSerializers::Adapter::Json (0.37ms)
+Completed 201 Created in 9ms (Views: 1.1ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/raiders" for ::1 at 2018-06-29 16:05:37 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "raiders" ("name", "power", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Barbfrag"], ["power", 9], ["created_at", "2018-06-29 20:05:37.006808"], ["updated_at", "2018-06-29 20:05:37.006808"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RaiderSerializer with ActiveModelSerializers::Adapter::Json (0.34ms)
+Completed 201 Created in 9ms (Views: 1.0ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/raiders" for ::1 at 2018-06-29 16:05:56 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Timmy Two-Finger", "power"=>"2"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "raiders" ("name", "power", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Timmy Two-Finger"], ["power", 2], ["created_at", "2018-06-29 20:05:56.827639"], ["updated_at", "2018-06-29 20:05:56.827639"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RaiderSerializer with ActiveModelSerializers::Adapter::Json (0.36ms)
+Completed 201 Created in 10ms (Views: 1.1ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/raiders" for ::1 at 2018-06-29 16:06:04 -0400
+Processing by RaidersController#index as HTML
+  [1m[36mRaider Load (0.3ms)[0m  [1m[34mSELECT "raiders".* FROM "raiders"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (0.74ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+
+
