@@ -18,7 +18,7 @@ class RaidersController < ApplicationController
     @raider = Raider.new(raider_params)
 
     if @raider.save
-      render json: @raider, status: :created
+      render json: @raider, status: :created, location: @raider
     else
       render json: @raider.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,6 @@ class RaidersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def raider_params
-      params.require(:raider).permit(:name, :power)
+      params.require(:raider).permit(:name, :power, :users_id)
     end
 end
