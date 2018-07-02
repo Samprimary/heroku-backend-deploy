@@ -7,7 +7,8 @@ curl "http://localhost:4741/raiders" \
   --data '{
     "raider": {
       "name": "'"${NAME}"'",
-      "power": "'"${POWER}"'"
+      "power": "'"${POWER}"'",
+      "user_id": "'"${USERID}"'"
     }
   }'
 

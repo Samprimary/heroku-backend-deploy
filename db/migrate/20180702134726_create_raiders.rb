@@ -3,7 +3,7 @@ class CreateRaiders < ActiveRecord::Migration[5.1]
     create_table :raiders do |t|
       t.string :name
       t.integer :power
-      t.references :users, foreign_key: true
+      t.references :user, foreign_key: true
 
       t.timestamps
     end

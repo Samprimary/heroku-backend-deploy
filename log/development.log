@@ -1037,3 +1037,359 @@ FOREIGN KEY ("users_id")
   [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2240333999022301455)[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/raiders" for ::1 at 2018-07-02 10:02:09 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.4ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.16ms)
+Completed 422 Unprocessable Entity in 44ms (Views: 5.2ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/raiders" for ::1 at 2018-07-02 10:03:30 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.06ms)
+Completed 422 Unprocessable Entity in 6ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/raiders" for ::1 at 2018-07-02 10:04:15 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.07ms)
+Completed 422 Unprocessable Entity in 26ms (Views: 3.6ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/sign-in" for ::1 at 2018-07-02 10:06:36 -0400
+Processing by UsersController#signin as */*
+  Parameters: {"credentials"=>{"email"=>"b@dee", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "b@dee"], ["LIMIT", 1]]
+  [1m[35mSQL (18.0ms)[0m  [1m[33mUPDATE "users" SET "token" = '59ef186d8f66c680a8aacac49d0d9866', "updated_at" = '2018-07-02 14:06:36.306418' WHERE "users"."id" = $1[0m  [["id", 6]]
+[active_model_serializers] Rendered UserLoginSerializer with ActiveModelSerializers::Adapter::Json (2.51ms)
+Completed 200 OK in 107ms (Views: 3.1ms | ActiveRecord: 31.4ms)
+
+
+Started POST "/raiders" for ::1 at 2018-07-02 10:06:42 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9"}}
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.09ms)
+Completed 422 Unprocessable Entity in 10ms (Views: 0.6ms | ActiveRecord: 6.5ms)
+
+
+Started POST "/raiders" for ::1 at 2018-07-02 10:07:12 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.1ms)
+Completed 422 Unprocessable Entity in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/raiders" for ::1 at 2018-07-02 10:07:24 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.16ms)
+Completed 422 Unprocessable Entity in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/raiders" for ::1 at 2018-07-02 10:10:00 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.09ms)
+Completed 422 Unprocessable Entity in 19ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/raiders" for ::1 at 2018-07-02 10:11:51 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9", "users_id"=>"1"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (uninitialized constant Raider::Users):
+  
+app/controllers/raiders_controller.rb:20:in `create'
+Started POST "/raiders" for ::1 at 2018-07-02 10:12:20 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9", "user_id"=>"1"}}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.06ms)
+Completed 422 Unprocessable Entity in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2018-07-02 10:12:49 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/rixey/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/rixey/.rbenv/versions/2.5.0/lib/ruby/gems/2.5.0/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/raiders" for ::1 at 2018-07-02 10:12:53 -0400
+Processing by RaidersController#index as HTML
+  [1m[36mRaider Load (0.7ms)[0m  [1m[34mSELECT "raiders".* FROM "raiders"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (0.47ms)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2018-07-02 10:12:58 -0400
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign-up" for ::1 at 2018-07-02 10:14:04 -0400
+Processing by UsersController#signup as */*
+  Parameters: {"credentials"=>{"email"=>"z@dee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "z@dee"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "z@dee"], ["token", "03f73b2e1d0335c6d67abe16bd678371"], ["password_digest", "$2a$10$Y7M.aMl.qXJlR0nKkp3TYezXju3dFyp6eYAArNsOop.XxSJchOgFy"], ["created_at", "2018-07-02 14:14:04.438878"], ["updated_at", "2018-07-02 14:14:04.438878"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "z@dee"], ["id", 7], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Json (41.48ms)
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 11.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column raiders.user_id does not exist
+LINE 1: SELECT "raiders".* FROM "raiders" WHERE "raiders"."user_id" ...
+                                                ^
+HINT:  Perhaps you meant to reference the column "raiders.users_id".
+: SELECT "raiders".* FROM "raiders" WHERE "raiders"."user_id" = $1):
+  
+app/controllers/users_controller.rb:11:in `signup'
+Started POST "/sign-up" for ::1 at 2018-07-02 10:15:19 -0400
+Processing by UsersController#signup as */*
+  Parameters: {"credentials"=>{"email"=>"z@dee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "z@dee"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "z@dee"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.04ms)
+Completed 400 Bad Request in 65ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/sign-up" for ::1 at 2018-07-02 10:15:30 -0400
+Processing by UsersController#signup as */*
+  Parameters: {"credentials"=>{"email"=>"y@dee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "y@dee"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "y@dee"], ["token", "2b5a7f5896770ba9d2f51270b1afaca2"], ["password_digest", "$2a$10$yuYp58alVR1NjGOfoI3KOOx.TU5ZbOOnK4AeiNy0UAxwQdeKPYth."], ["created_at", "2018-07-02 14:15:30.078144"], ["updated_at", "2018-07-02 14:15:30.078144"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "y@dee"], ["id", 8], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mRaider Load (0.4ms)[0m  [1m[34mSELECT "raiders".* FROM "raiders" WHERE "raiders"."user_id" = $1[0m  [["user_id", 8]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Json (1.94ms)
+Completed 500 Internal Server Error in 70ms (ActiveRecord: 3.5ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column raiders.user_id does not exist
+LINE 1: SELECT "raiders".* FROM "raiders" WHERE "raiders"."user_id" ...
+                                                ^
+HINT:  Perhaps you meant to reference the column "raiders.users_id".
+: SELECT "raiders".* FROM "raiders" WHERE "raiders"."user_id" = $1):
+  
+app/controllers/users_controller.rb:11:in `signup'
+Started GET "/raiders" for ::1 at 2018-07-02 10:23:00 -0400
+Processing by RaidersController#index as HTML
+  [1m[36mRaider Load (0.2ms)[0m  [1m[34mSELECT "raiders".* FROM "raiders"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Json (0.24ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/raiders" for ::1 at 2018-07-02 10:23:59 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9", "user_id"=>"1"}}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.06ms)
+Completed 422 Unprocessable Entity in 4ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/raiders" for ::1 at 2018-07-02 10:28:18 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9", "user_id"=>"1"}}
+Unpermitted parameter: :user_id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.07ms)
+Completed 422 Unprocessable Entity in 13ms (Views: 2.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sign-up" for ::1 at 2018-07-02 10:28:54 -0400
+Processing by UsersController#signup as */*
+  Parameters: {"credentials"=>{"email"=>"x@dee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "x@dee"], ["LIMIT", 1]]
+  [1m[35mSQL (6.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "x@dee"], ["token", "da00413ad013a2b589eedd227716b3ec"], ["password_digest", "$2a$10$dN1mO4REtjAP3D/ksxJvFezA3QZX9Ju9.epND8QqBjnbVtV0kbAku"], ["created_at", "2018-07-02 14:28:54.978331"], ["updated_at", "2018-07-02 14:28:54.978331"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "x@dee"], ["id", 9], ["LIMIT", 1]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Json (3.26ms)
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 10.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column raiders.user_id does not exist
+LINE 1: SELECT "raiders".* FROM "raiders" WHERE "raiders"."user_id" ...
+                                                ^
+HINT:  Perhaps you meant to reference the column "raiders.users_id".
+: SELECT "raiders".* FROM "raiders" WHERE "raiders"."user_id" = $1):
+  
+app/controllers/users_controller.rb:11:in `signup'
+Started POST "/sign-up" for ::1 at 2018-07-02 10:39:18 -0400
+Processing by UsersController#signup as */*
+  Parameters: {"credentials"=>{"email"=>"x@dee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "x@dee"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "x@dee"], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.05ms)
+Completed 400 Bad Request in 61ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/sign-up" for ::1 at 2018-07-02 10:39:26 -0400
+Processing by UsersController#signup as */*
+  Parameters: {"credentials"=>{"email"=>"q@dee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "q@dee"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "q@dee"], ["token", "1eb0e5704c002c76a75454d0a0c4eb7a"], ["password_digest", "$2a$10$KVRjnmhRwlQzs/33eoaC.e8dNQfQ5Q8EBwFh1NyyGmomawWDE83xi"], ["created_at", "2018-07-02 14:39:26.588292"], ["updated_at", "2018-07-02 14:39:26.588292"]]
+  [1m[35m (7.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "q@dee"], ["id", 10], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mRaider Load (1.0ms)[0m  [1m[34mSELECT "raiders".* FROM "raiders" WHERE "raiders"."user_id" = $1[0m  [["user_id", 10]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Json (2.21ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 8.9ms)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column raiders.user_id does not exist
+LINE 1: SELECT "raiders".* FROM "raiders" WHERE "raiders"."user_id" ...
+                                                ^
+HINT:  Perhaps you meant to reference the column "raiders.users_id".
+: SELECT "raiders".* FROM "raiders" WHERE "raiders"."user_id" = $1):
+  
+app/controllers/users_controller.rb:11:in `signup'
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/rixey/wdi/full-stack-project/heroku-backend-deploy/config/initializers/new_framework_defaults.rb:18)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2240333999022301455)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRaiders (20180702134726)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (21.2ms)[0m  [1m[35mDROP TABLE "raiders"[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20180702134726"]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2240333999022301455)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2240333999022301455)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateRaiders (20180702134726)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (11.3ms)[0m  [1m[35mCREATE TABLE "raiders" ("id" bigserial primary key, "name" character varying, "power" integer, "user_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_2c2bfff70a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX  "index_raiders_on_user_id" ON "raiders"  ("user_id")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180702134726"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2240333999022301455)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/rixey/wdi/full-stack-project/heroku-backend-deploy/config/initializers/new_framework_defaults.rb:18)
+Started POST "/sign-up" for ::1 at 2018-07-02 10:44:09 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#signup as */*
+  Parameters: {"credentials"=>{"email"=>"r@dee", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "r@dee"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "r@dee"], ["token", "9a85c56ea26e3d15862799bb01fcb48c"], ["password_digest", "$2a$10$vijqPSxUseZTTtDUkgdqA.5vkvumCnyqNvX3DStopZYUN7.9hWqJ2"], ["created_at", "2018-07-02 14:44:09.180461"], ["updated_at", "2018-07-02 14:44:09.180461"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND ("users"."id" != $2) LIMIT $3[0m  [["email", "r@dee"], ["id", 11], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mRaider Load (0.4ms)[0m  [1m[34mSELECT "raiders".* FROM "raiders" WHERE "raiders"."user_id" = $1[0m  [["user_id", 11]]
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Json (8.26ms)
+Completed 201 Created in 88ms (Views: 6.8ms | ActiveRecord: 12.8ms)
+
+
+Started POST "/raiders" for ::1 at 2018-07-02 10:44:18 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9", "user_id"=>"1"}}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.06ms)
+Completed 422 Unprocessable Entity in 12ms (Views: 2.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/raiders" for ::1 at 2018-07-02 10:45:04 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9", "user_id"=>"11"}}
+Unpermitted parameter: :user_id
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.06ms)
+Completed 422 Unprocessable Entity in 4ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+DEPRECATION WARNING: ActiveSupport.halt_callback_chains_on_return_false= is deprecated and will be removed in Rails 5.2. (called from <top (required)> at /Users/rixey/wdi/full-stack-project/heroku-backend-deploy/config/initializers/new_framework_defaults.rb:18)
+Started POST "/raiders" for ::1 at 2018-07-02 10:47:41 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9", "user_id"=>"11"}}
+Unpermitted parameter: :user_id
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.06ms)
+Completed 422 Unprocessable Entity in 4ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/raiders" for ::1 at 2018-07-02 10:49:22 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9", "user_id"=>"11"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.06ms)
+Completed 422 Unprocessable Entity in 32ms (Views: 14.6ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/raiders" for ::1 at 2018-07-02 10:50:30 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9", "user_id"=>"11"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (8.2ms)[0m  [1m[32mINSERT INTO "raiders" ("name", "power", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Barbfrag"], ["power", 9], ["user_id", 11], ["created_at", "2018-07-02 14:50:30.108206"], ["updated_at", "2018-07-02 14:50:30.108206"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RaiderSerializer with ActiveModelSerializers::Adapter::Json (6.07ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 12.0ms)
+
+
+  
+NoMethodError (undefined method `users' for #<Raider:0x00007f98736d7d98>
+Did you mean?  user
+               user=):
+  
+app/controllers/raiders_controller.rb:21:in `create'
+Started POST "/raiders" for ::1 at 2018-07-02 10:53:39 -0400
+Processing by RaidersController#create as */*
+  Parameters: {"raider"=>{"name"=>"Barbfrag", "power"=>"9", "user_id"=>"11"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "raiders" ("name", "power", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Barbfrag"], ["power", 9], ["user_id", 11], ["created_at", "2018-07-02 14:53:39.327738"], ["updated_at", "2018-07-02 14:53:39.327738"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered RaiderSerializer with ActiveModelSerializers::Adapter::Json (0.43ms)
+Completed 201 Created in 25ms (Views: 1.7ms | ActiveRecord: 6.5ms)
+
+
