@@ -1,5 +1,5 @@
 class RaidersController < ApplicationController
-  before_action :set_raider, except: %i[new edit]
+  before_action :set_raider, only: [:show, :update, :destroy, :create]
 
   # GET /raiders
   def index
